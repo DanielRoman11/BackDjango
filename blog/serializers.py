@@ -4,7 +4,7 @@ from rest_framework import serializers
 class UserSerializer(serializers.ModelSerializer):
   class Meta:
     model= User
-    field= '__all__'
+    fields= '__all__'
 
 class PostSerializer(serializers.ModelSerializer):
   owner= UserSerializer(read_only=True)
@@ -12,9 +12,9 @@ class PostSerializer(serializers.ModelSerializer):
   
   class Meta:
     model= Post
-    field= '__all__'
+    fields= '__all__'
 
 class CommentSerializer(serializers.ModelSerializer):
   class Meta:
     model= Comment
-    field= '__all__'
+    fields= '__all__'

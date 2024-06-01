@@ -4,13 +4,13 @@ from .models import User, Post, Comment
 
 # Create your views here.
 class UserViewSet(viewsets.ModelViewSet):
-  serializer_class= UserSerializer()
+  serializer_class= UserSerializer
   queryset= User.objects.all()
 
 class PostViewSet(viewsets.ModelViewSet):
-  serializer_class= PostSerializer()
+  serializer_class= PostSerializer
   queryset= Post.objects.all()
 
 class CommentViewSet(viewsets.ModelViewSet):
-  serializer_class= CommentSerializer()
+  serializer_class= CommentSerializer
   queryset= Comment.objects.all()
